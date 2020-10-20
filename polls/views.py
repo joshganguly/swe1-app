@@ -100,7 +100,10 @@ def vote(request, question_id):
         return render(
             request,
             "polls/detail.html",
-            {"question": question, "error_message": "You didn't select a choice!", },
+            {
+                "question": question,
+                "error_message": "You didn't select a choice!",
+            },  # noqa: <spacing conflict>
         )
     else:
         selected_choice.votes += 1
